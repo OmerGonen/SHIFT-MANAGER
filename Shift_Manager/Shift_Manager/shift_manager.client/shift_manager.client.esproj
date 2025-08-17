@@ -7,5 +7,10 @@
     <ShouldRunBuildScript>false</ShouldRunBuildScript>
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+    <BuildCommand>
+    </BuildCommand>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\testData\" />
+  </ItemGroup>
 </Project>
