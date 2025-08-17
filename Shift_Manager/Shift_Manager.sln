@@ -3,7 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "shift_manager.client", "Shift_Manager\shift_manager.client\shift_manager.client.esproj", "{975C545E-884A-756B-239E-88526485ADAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shift_Manager.Server", "Shift_Manager\Shift_Manager.Server\Shift_Manager.Server.csproj", "{23D9BD16-9411-48EA-A952-36B6BF0D616D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{975C545E-884A-756B-239E-88526485ADAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975C545E-884A-756B-239E-88526485ADAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975C545E-884A-756B-239E-88526485ADAC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{975C545E-884A-756B-239E-88526485ADAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{975C545E-884A-756B-239E-88526485ADAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{975C545E-884A-756B-239E-88526485ADAC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{23D9BD16-9411-48EA-A952-36B6BF0D616D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D9BD16-9411-48EA-A952-36B6BF0D616D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D9BD16-9411-48EA-A952-36B6BF0D616D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D9BD16-9411-48EA-A952-36B6BF0D616D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
