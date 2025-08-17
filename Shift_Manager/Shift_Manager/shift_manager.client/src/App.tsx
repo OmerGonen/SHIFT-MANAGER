@@ -1,58 +1,71 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import { setInterval } from 'timers';
+import PostionsTable from './components/PostionsTable';
 
-interface Forecast {
-    date: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
-}
+//interface Forecast {
+//    date: string;
+//    temperatureC: number;
+//    temperatureF: number;
+//    summary: string;
+//}
 
 function App() {
-    const [forecasts, setForecasts] = useState<Forecast[]>();
+/*    const [forecasts, setForecasts] = useState<Forecast[]>();
+    const [currentTime, setCurrentTime] = useState(new Date);*/
 
-    useEffect(() => {
-        populateWeatherData();
-    }, []);
+    //useEffect(() => {
+    //    populateWeatherData();
+    //}, []);
 
-    const contents = forecasts === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tableLabel">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
+    //useEffect(() => {
+    //    const timer = setInterval(() => {
+    //            setCurrentTime(new Date());
+    //        }, 1000);
+
+    //return () => clearInterval(timer);
+    //}, []);
+
+
 
     return (
         <div>
-            <h1 id="tableLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
+            {/*<h1 id="tableLabel">Shift Manager</h1>*/}
+            {/*<h2 id="TimeToday">Time Now: {currentTime.toLocaleTimeString() } </h2>*/}
+            
+            {/*<p>Mananging shifts,platoons,missions and crap like that</p>*/}
+            {/*{contents}*/}
+            <div id='TitleDiv'>
+                {/*Time line */}
+                {/* Title */}
+                {/*Current Time */}
+            </div>
+            <div id='TopMainDiv'>
+                {/*Postions Table */}
+                PostionsTable.PostionsTable(null);
+                {/* Carmel A */}
+                {/*Carmel  B */}
+                {/* Shifts Button*/}
+                {/*Shifts Settings  Button */}
+            </div>
+            <div id='BottomMainDiv'>
+                {/*Mission Table */}
+                {/* Kitchen  */}
+            </div>
+            <div id='FootingDiv'>
+            </div>
         </div>
     );
 
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        if (response.ok) {
-            const data = await response.json();
-            setForecasts(data);
-        }
-    }
+    //async function populateWeatherData() {
+    //    //call to backend 
+    //    const response = await fetch('weatherforecast');
+    //    if (response.ok) {
+    //        const data = await response.json();
+    //        setForecasts(data);
+    //    }
+    //}
+
 }
 
 export default App;
