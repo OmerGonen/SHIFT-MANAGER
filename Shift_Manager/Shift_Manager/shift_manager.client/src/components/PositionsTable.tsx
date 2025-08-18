@@ -10,8 +10,8 @@ export default function PositionsTable({ data }: PostionsTableProps) {
             <table className="table table-striped" aria-labelledby="tableLabel">
                 <thead>
                     <tr>
-                        <th>Blue</th>
-                        <th>White</th>
+                        <th>North</th>
+                        <th>Gate Keeper</th>
                         <th>Times</th>
                     </tr>
                 </thead>

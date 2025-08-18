@@ -1,17 +1,33 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import PositionsTable from './components/PositionsTable';
-import { getPositionsAndTimesTableTestData } from './testData/testDataGenerator';
+import CarmelA from './components/CarmelA';
+import CarmelB from './components/CarmelB';
+import { getPositionsAndTimesTableTestData, getCarmelATestData, getCarmelBTestData } from './testData/testDataGenerator';
 import { getCurrentTime } from './utilities/time';
+
 
 function App() {
     const [positionsAndTimesTableData, setPositionsAndTimesTableData] = useState([]);
+    const [carmelATableData, setCarmelAData] = useState([]);
+    const [carmelBTableData, setCarmelBData] = useState([]);
     const [currentTime, setCurrentTime] = useState(new Date);
 
     useEffect(() => {
         //getting test data for positions and times table
         const positionAndTimesData = getPositionsAndTimesTableTestData();
         setPositionsAndTimesTableData(positionAndTimesData);
+    }, []);
+    useEffect(() => {
+        //getting test data for Carmel A and times table
+        const CarmelAData = getCarmelATestData();
+        setCarmelAData(CarmelAData);
+    }, []);
+
+    useEffect(() => {
+        //getting test data for Carmel B and times table
+        const CarmelBData = getCarmelBTestData();
+        setCarmelBData(CarmelBData);
     }, []);
 
     useEffect(() => {
@@ -29,9 +45,17 @@ function App() {
             </div>
             <div id='TopMainDiv'>
                 {/*Postions Table */}
+                <br></br>
+                <h2>Shift List</h2>
                 <PositionsTable data={ positionsAndTimesTableData} />
                 {/* Carmel A */}
+                <br></br>
+                <h2>Carmel A</h2>
+                <CarmelA data={carmelATableData} />
                 {/*Carmel  B */}
+                <br></br>
+                <h2>Carmel B</h2>
+                <CarmelB data={carmelBTableData} />
                 {/* Shifts Button*/}
                 {/*Shifts Settings  Button */}
             </div>
