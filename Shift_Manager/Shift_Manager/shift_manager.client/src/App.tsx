@@ -1,48 +1,35 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { setInterval } from 'timers';
-import PostionsTable from './components/PostionsTable';
-
-//interface Forecast {
-//    date: string;
-//    temperatureC: number;
-//    temperatureF: number;
-//    summary: string;
-//}
+import PositionsTable from './components/PositionsTable';
+import { getPositionsAndTimesTableTestData } from './testData/testDataGenerator';
+import { getCurrentTime } from './utilities/time';
 
 function App() {
-/*    const [forecasts, setForecasts] = useState<Forecast[]>();
-    const [currentTime, setCurrentTime] = useState(new Date);*/
+    const [positionsAndTimesTableData, setPositionsAndTimesTableData] = useState([]);
+    const [currentTime, setCurrentTime] = useState(new Date);
 
-    //useEffect(() => {
-    //    populateWeatherData();
-    //}, []);
+    useEffect(() => {
+        //getting test data for positions and times table
+        const positionAndTimesData = getPositionsAndTimesTableTestData();
+        setPositionsAndTimesTableData(positionAndTimesData);
+    }, []);
 
-    //useEffect(() => {
-    //    const timer = setInterval(() => {
-    //            setCurrentTime(new Date());
-    //        }, 1000);
-
-    //return () => clearInterval(timer);
-    //}, []);
+    useEffect(() => {
+        getCurrentTime(setCurrentTime);
+    }, []);
 
 
 
     return (
         <div>
-            {/*<h1 id="tableLabel">Shift Manager</h1>*/}
-            {/*<h2 id="TimeToday">Time Now: {currentTime.toLocaleTimeString() } </h2>*/}
-            
-            {/*<p>Mananging shifts,platoons,missions and crap like that</p>*/}
-            {/*{contents}*/}
             <div id='TitleDiv'>
-                {/*Time line */}
-                {/* Title */}
-                {/*Current Time */}
+                <h1 id="tableLabel">Shift Manager</h1>
+                <h2 id="TimeToday">Time Now: {currentTime.toLocaleTimeString()} </h2>
+                <p>Mananging shifts,platoons,missions and crap like that</p>
             </div>
             <div id='TopMainDiv'>
                 {/*Postions Table */}
-                PostionsTable.PostionsTable(null);
+                <PositionsTable data={ positionsAndTimesTableData} />
                 {/* Carmel A */}
                 {/*Carmel  B */}
                 {/* Shifts Button*/}
