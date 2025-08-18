@@ -13,8 +13,6 @@ export default function CarmelA({ data } : CarmelAProps ){
                     
 
                     Time Shift:
-                    
-
                     <br></br>
                     {' ' + CarmelAData.time}
                     <br></br>
@@ -25,11 +23,8 @@ export default function CarmelA({ data } : CarmelAProps ){
                     {CarmelAData.names.map(name =>
 
                         name + ', '
-
                     )}
                     <br/>
-
-                
                 </p>
                
             )}
