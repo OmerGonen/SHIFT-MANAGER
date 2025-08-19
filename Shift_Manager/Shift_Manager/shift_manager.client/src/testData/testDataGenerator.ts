@@ -1,4 +1,6 @@
 import { PositionsAndTimesRaw } from '../interfaces/PositionsAndTimesRaw'; 
+import { CarmelAData } from '../interfaces/CarmelAData';
+import { CarmelBData } from '../interfaces/CarmelBData';
 
 export function getPositionsAndTimesTableTestData(): PositionsAndTimesRaw[] {
     const testData: PositionsAndTimesRaw[] =
@@ -36,5 +38,57 @@ export function getPositionsAndTimesTableTestData(): PositionsAndTimesRaw[] {
         ];
 
     return testData;
+
 }
+
+
+    export function getCarmelATestData(): CarmelAData[] {
+        const testData: CarmelAData[] =
+            [
+                {
+                    id: 'MorningShift',
+                    names: ['Omer', 'Iztik', 'Ronen', 'Mohhamad def'],
+                    time: 'Morning'
+                },
+                {
+                    id: 'NoonShift',
+                    names: ['Avi', 'Kobi', 'Shalom', 'Ben Laden'],
+                    time: 'NoonShift'
+                },
+                {
+                    id: 'NightShift',
+                    names: ['Leon', 'Kobi', 'Shalom', 'Ben Laden'],
+                    time: 'NightShift'
+                }
+
+            ];
+
+        return testData;
+};
+
+
+export function getCarmelBTestData(): CarmelBData[] {
+    const testData: CarmelBData[] =
+        [
+            {
+                id: 'MorningShift',
+                names: ['Omer', 'Iztik', 'Ronen', 'Mohhamad def'],
+                time: 'Morning'
+            },
+            {
+                id: 'NoonShift',
+                names: ['Avi', 'Kobi', 'Shalom', 'Ben Laden'],
+                time: 'NoonShift'
+            },
+            {
+                id: 'NightShift',
+                names: ['Leon', 'Kobi', 'Shalom', 'Ben Laden'],
+                time: 'NightShift'
+            }
+
+        ];
+
+    return testData;
+};
+
 
