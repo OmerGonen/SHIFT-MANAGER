@@ -45,16 +45,10 @@ function App() {
             </div>
             <div id='TopMainDiv'>
                 {/*Postions Table */}
-                <br></br>
-                <h2>Shift List</h2>
                 <PositionsTable data={ positionsAndTimesTableData} />
                 {/* Carmel A */}
-                <br></br>
-                <h2>Carmel A</h2>
                 <CarmelA data={carmelATableData} />
                 {/*Carmel  B */}
-                <br></br>
-                <h2>Carmel B</h2>
                 <CarmelB data={carmelBTableData} />
                 {/* Shifts Button*/}
                 {/*Shifts Settings  Button */}

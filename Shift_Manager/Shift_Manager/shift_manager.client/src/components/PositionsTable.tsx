@@ -7,6 +7,7 @@ type PostionsTableProps = {
 export default function PositionsTable({ data }: PostionsTableProps) {
     return (
         <div>
+            <h2>Shift List</h2>
             <table className="table table-striped" aria-labelledby="tableLabel">
                 <thead>
                     <tr>

@@ -7,28 +7,15 @@ type CarmelAProps = {
 export default function CarmelA({ data } : CarmelAProps ){
     return (
         <div>
+            <h2>Carmel A</h2>
             {data.map(CarmelAData =>
                 <p>
-
-                    
-
-                    Time Shift:
-                    <br></br>
-                    {' ' + CarmelAData.time}
-                    <br></br>
-                    <br />
-                    Crew Members:
-                    <br></br>
-
+                    {' ' + CarmelAData.id + ': '}
                     {CarmelAData.names.map(name =>
-
                         name + ', '
                     )}
-                    <br/>
                 </p>
-               
             )}
         </div>
     );
-
 }

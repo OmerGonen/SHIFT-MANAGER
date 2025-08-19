@@ -46,19 +46,16 @@ export function getPositionsAndTimesTableTestData(): PositionsAndTimesRaw[] {
         const testData: CarmelAData[] =
             [
                 {
-                    id: 'MorningShift',
+                    id: 'Morning-Shift',
                     names: ['Omer', 'Iztik', 'Ronen', 'Mohhamad def'],
-                    time: 'Morning'
                 },
                 {
-                    id: 'NoonShift',
+                    id: 'Noon-Shift',
                     names: ['Avi', 'Kobi', 'Shalom', 'Ben Laden'],
-                    time: 'NoonShift'
                 },
                 {
-                    id: 'NightShift',
+                    id: 'Night-Shift',
                     names: ['Leon', 'Kobi', 'Shalom', 'Ben Laden'],
-                    time: 'NightShift'
                 }
 
             ];
@@ -71,19 +68,16 @@ export function getCarmelBTestData(): CarmelBData[] {
     const testData: CarmelBData[] =
         [
             {
-                id: 'MorningShift',
+                id: 'Morning-Shift',
                 names: ['Omer', 'Iztik', 'Ronen', 'Mohhamad def'],
-                time: 'Morning'
             },
             {
-                id: 'NoonShift',
+                id: 'Noon-Shift',
                 names: ['Avi', 'Kobi', 'Shalom', 'Ben Laden'],
-                time: 'NoonShift'
             },
             {
-                id: 'NightShift',
+                id: 'Night-Shift',
                 names: ['Leon', 'Kobi', 'Shalom', 'Ben Laden'],
-                time: 'NightShift'
             }
 
         ];
